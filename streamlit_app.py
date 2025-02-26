@@ -26,14 +26,6 @@ name_on_order = st.text_input("Name on Smoothie")
 st.write("The name on your Smoothie will be:", name_on_order)
 
 
-"""option = st.selectbox(
-    "What is your favorite fruits?",
-    ("Banana", "Strawberries", "Peaches"),
-)
-
-st.write("Your favorite fruit is:", option)"""
-
-
 
 # session = get_active_session()
 cnx = st.connection("snowflake")
@@ -48,9 +40,6 @@ ingredients_list = st.multiselect(
 )
 
 if ingredients_list:
-    """st.write(ingredients_list)
-    st.text(ingredients_list)"""
-
     ingredients_string = ''
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
